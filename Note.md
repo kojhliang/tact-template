@@ -6,8 +6,8 @@
  3.contract.write.ts的代码中，如果发送多次write交易，只有第一次的会成功，其他都会失败。需要确保结束一次交易后，再发送下一次交易。      
    
  4.合约/账户地址的显示格式，在测试网中有0Q和KQ开头的地址两种格式的地址，但都是对应同一个合约。这点一个合约有多种地址格式，很容易让初学者比较困惑。 
-   以下是4种地址格式的说明：主网有 EQ（业务合约）和UQ（钱包）的前缀，测试网络有KQ（业务合约）和0Q（钱包）的前缀
-   <img width="905" alt="主网业务合约地址 EQA XoUfrerc2eJwW62L9U7ZW_ BiA6VUWTQec" src="https://github.com/kojhliang/tact-template/assets/24265284/d4085a0b-3bfb-4e20-8ca4-b923a0eb0b3c">
+   以下是4种地址格式的说明：主网有 EQ（业务合约）和UQ（钱包）的前缀，测试网络有KQ（业务合约）和0Q（钱包）的前缀。
+   <img width="905" alt="主网业务合约地址 EQA XoUfrerc2eJwW62L9U7ZW_ BiA6VUWTQec" src="https://github.com/kojhliang/tact-template/assets/24265284/d4085a0b-3bfb-4e20-8ca4-b923a0eb0b3c">  
 
    
  5. 使用以下代码后：  
