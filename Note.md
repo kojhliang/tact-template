@@ -12,4 +12,8 @@
     const walletSender = walletContract.sender(key.secretKey);  
     如果使用walletSender.address as Address 这样的方式，获取到的address会为undefined，因此不能使用这样的方式获取钱包地址。
   
- 6.测试FT的Jetton转帐时，如果新注册一个钱包账户，即使已经使用机器人水龙头获得一定的测试Ton coin，并且调用Jetton Master合约mint了一定Jetton币到这个钱包账户，这个钱包账户的状态依然是uninit状态，必须要主动使用这个钱包执行一次交易，可以是发送Ton coin或者发送Jetton 币到其他地址后，这样钱包的状态才会更改成Active.
+ 6.测试FT的Jetton转帐时，如果新注册一个钱包账户，即使已经使用机器人水龙头获得一定的测试Ton coin，并且调用Jetton Master合约mint了一定Jetton币到这个钱包账户，这个钱包账户的状态依然是uninit状态，必须要主动使用这个钱包执行一次交易，可以是发送Ton coin或者发送Jetton 币到其他地址后，这样钱包的状态才会更改成Active.  
+  
+ 7.get 的方法只是给链下的客户端去调用的，不是给合约调用的，如果想让合约调用获取数据，必须要使用receive方法。  
+  
+ 8.发送消息时如果Mode包含SendPayGasSeparately，如果加上的话，发送消息给其他合约时，直接从当前合约的余额Ton coin中扣，如果不加上的话，从发送消息附带的余额中扣。  
